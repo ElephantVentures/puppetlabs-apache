@@ -22,6 +22,10 @@
 #   to /var/log/<apache log location>/
 # - The $access_log specifies if *_access.log directives should be configured.
 # - The $ensure specifies if vhost file is present or absent.
+# - The $vhost_rewrite_rule is an Array of Hashes which describes a set of 
+#       rewrite rules using the :pattern, :substitution, and :flags as keys.
+#       For example:
+#       $vhost_rewrite_rule = [{:pattern => '/foo?', :substitution => '/bar$1', :flags => 'B, nocase'
 #
 # Actions:
 # - Install Apache Virtual Hosts
