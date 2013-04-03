@@ -28,8 +28,8 @@
 # - The $alias_url for the alias directive url (optional)
 # - The $vhost_rewrite_rule is an Array of Hashes which describes a set of 
 #       rewrite rules using the :pattern, :substitution, and :flags as keys.
-#       For example:
-#       $vhost_rewrite_rule = [{"pattern" => '/foo?', "substitution" => '/bar$1', "flags" => 'B, nocase'
+#       For example, this would go in your instance's .pp config:
+#       vhost_rewrite_rule => [{"pattern" => '/foo?', "substitution" => '/bar$1', "flags" => 'B,nocase'}]
 #
 # Actions:
 # - Install Apache Virtual Hosts
