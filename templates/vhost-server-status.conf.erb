@@ -1,0 +1,14 @@
+# ************************************
+# Server status vhost template in module puppetlabs-apache
+# Managed by Puppet
+# ************************************
+NameVirtualHost <%= vhost_name %>:<%= port %>
+<VirtualHost <%= vhost_name %>:<%= port %>>
+  <Location /server-status> 
+      SetHandler server-status 
+      Order deny,allow 
+      Deny from all 
+      Allow from <%= vhost_name %>
+  </Location> 
+</VirtualHost>
+
